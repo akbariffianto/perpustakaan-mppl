@@ -38,27 +38,39 @@ Sebelum menggunakan database ini, pastikan Anda memiliki:
 
 ### Tabel `baca`
 - **id_baca**: ID unik untuk aktivitas membaca.
-- **id_akun**: ID pengguna yang membaca.
+- **total_selesai**: Total buku yang selesai dibaca.
+- **genre_fav**: Genre favorit pengguna.
+- **tgl_selesai_baca**: Tanggal selesai membaca.
 - **id_buku**: ID buku yang dibaca.
-- **tanggal_baca**: Tanggal aktivitas membaca.
 
 ### Tabel `buku`
 - **id_buku**: ID unik untuk setiap buku.
 - **judul**: Judul buku.
 - **penulis**: Penulis buku.
-- **tahun_terbit**: Tahun terbit buku.
-- **kategori**: Kategori buku.
+- **deskripsi**: Deskripsi buku.
+- **urlFoto**: URL foto sampul buku.
+- **total_baca**: Total kali buku dibaca.
+- **rate_baca**: Rating dari pembaca.
+- **id_rak**: ID rak tempat buku disimpan.
 
-### Tabel `peminjaman`
-- **id_peminjaman**: ID unik untuk setiap transaksi peminjaman.
-- **id_akun**: ID pengguna yang meminjam buku.
+### Tabel `pinjaman_buku`
+- **id_pinjam**: ID unik untuk transaksi peminjaman.
+- **tgl_pinjam**: Tanggal peminjaman buku.
+- **tgl_kembali**: Tanggal pengembalian buku.
+- **status**: Status peminjaman (misalnya, "dipinjam" atau "dikembalikan").
+- **id_user**: ID pengguna yang meminjam buku.
 - **id_buku**: ID buku yang dipinjam.
-- **tanggal_pinjam**: Tanggal peminjaman.
-- **tanggal_kembali**: Tanggal pengembalian.
 
-### Tabel `kategori`
-- **id_kategori**: ID unik untuk setiap kategori.
-- **nama_kategori**: Nama kategori buku.
+### Tabel `tabel`
+- **id_rak**: ID unik untuk setiap rak.
+- **posisi**: Lokasi atau posisi rak di perpustakaan.
+
+### Tabel `user`
+- **id_user**: ID unik untuk setiap pengguna.
+- **nama**: Nama lengkap pengguna.
+- **foto_profile**: URL foto profil pengguna.
+- **id_baca**: ID aktivitas membaca yang terkait dengan pengguna.
+- **id_akun**: ID akun pengguna.
 
 ## Penggunaan
 
