@@ -42,7 +42,23 @@ Sebelum menggunakan database ini, pastikan Anda memiliki:
 - **id_buku**: ID buku yang dibaca.
 - **tanggal_baca**: Tanggal aktivitas membaca.
 
-(Tabel lain dapat dijelaskan jika diperlukan.)
+### Tabel `buku`
+- **id_buku**: ID unik untuk setiap buku.
+- **judul**: Judul buku.
+- **penulis**: Penulis buku.
+- **tahun_terbit**: Tahun terbit buku.
+- **kategori**: Kategori buku.
+
+### Tabel `peminjaman`
+- **id_peminjaman**: ID unik untuk setiap transaksi peminjaman.
+- **id_akun**: ID pengguna yang meminjam buku.
+- **id_buku**: ID buku yang dipinjam.
+- **tanggal_pinjam**: Tanggal peminjaman.
+- **tanggal_kembali**: Tanggal pengembalian.
+
+### Tabel `kategori`
+- **id_kategori**: ID unik untuk setiap kategori.
+- **nama_kategori**: Nama kategori buku.
 
 ## Penggunaan
 
@@ -68,4 +84,4 @@ Setelah database berhasil diimpor, Anda dapat:
 
 ---
 
-Jika ada pertanyaan atau masalah, silakan hubungi pembuat repository ini.
+Jika ada pertanyaan atau masalah, silakan hubungi
